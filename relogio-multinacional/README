@@ -1,0 +1,53 @@
+# Relógios para Diferentes Lugares do Mundo
+
+## Descrição
+
+Este projeto tem como objetivo a criação de uma hierarquia de classes para simular relógios de diferentes lugares do mundo. A estrutura é composta por uma classe pai com propriedades para hora, minuto e segundo, além de métodos para manipulação desses valores e formatação da hora. A classe pai será estendida por duas implementações: uma para o relógio americano (que não possui as horas de 13 a 24) e outra para o relógio brasileiro.
+
+## Estrutura
+
+A estrutura de classes será composta da seguinte maneira:
+
+1. **Classe Pai (Relogio):** Definirá as propriedades de hora, minuto e segundo, com os respectivos getters e setters, além de um método para formatar a hora.
+2. **Classe Filha (RelogioAmericano):** Implementação do relógio americano, com a limitação de horas entre 1 e 12.
+3. **Classe Filha (RelogioBrasileiro):** Implementação do relógio brasileiro, que seguirá a contagem de 24 horas.
+
+## Classes
+
+### Classe `Relogio` (Superclasse)
+A classe `Relogio` possui as propriedades básicas de hora, minuto e segundo, e métodos para manipulação desses valores.
+
+#### Propriedades:
+- `hora`: Representa a hora do relógio.
+- `minuto`: Representa o minuto do relógio.
+- `segundo`: Representa o segundo do relógio.
+
+#### Métodos:
+- `getHora()`: Retorna a hora atual.
+- `setHora(int hora)`: Define a hora do relógio.
+- `getMinuto()`: Retorna o minuto atual.
+- `setMinuto(int minuto)`: Define o minuto do relógio.
+- `getSegundo()`: Retorna o segundo atual.
+- `setSegundo(int segundo)`: Define o segundo do relógio.
+- `horaFormatada()`: Retorna a hora no formato "HH:MM:SS".
+- `atualizarRelogio(Relogio relogio)`: Método abstrato, deve ser implementado pelas subclasses para atualizar o relógio com base em outro objeto `Relogio`.
+
+### Classe `RelogioAmericano` (Filha)
+A classe `RelogioAmericano` implementa a lógica de um relógio de 12 horas, onde as horas variam de 1 a 12.
+
+#### Métodos:
+- `atualizarRelogio(Relogio relogio)`: Implementação do método abstrato da classe pai, adaptando as horas para o formato de 12 horas.
+
+### Classe `RelogioBrasileiro` (Filha)
+A classe `RelogioBrasileiro` implementa a lógica de um relógio de 24 horas, onde as horas variam de 0 a 23.
+
+#### Métodos:
+- `atualizarRelogio(Relogio relogio)`: Implementação do método abstrato da classe pai, mantendo o formato de 24 horas.
+
+## Entrada
+
+A entrada será composta por instâncias dos objetos `RelogioAmericano` ou `RelogioBrasileiro`. Será possível modificar as propriedades do relógio através dos getters e setters, além de atualizar o relógio com base em outro.
+
+## Saída
+
+A saída será a hora formatada no formato "HH:MM:SS" de acordo com o tipo de relógio. No caso do relógio americano, o formato será de 12 horas, e no caso do relógio brasileiro, será de 24 horas.
