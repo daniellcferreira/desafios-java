@@ -3,6 +3,7 @@ package task.board;
 import java.sql.SQLException;
 
 import task.board.persistence.migration.MigrationStrategy;
+import task.board.ui.MainMenu;
 
 import static task.board.persistence.config.ConnectionConfig.getConnection;
 
@@ -12,6 +13,7 @@ public class App {
     try (var connection = getConnection()) {
       new MigrationStrategy(connection).executeMigration();
     }
+    new MainMenu().execute();
   }
 
 }
