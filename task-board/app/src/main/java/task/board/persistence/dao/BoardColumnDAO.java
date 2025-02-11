@@ -9,6 +9,7 @@ import java.util.Optional;
 import com.mysql.cj.jdbc.StatementImpl;
 
 import lombok.RequiredArgsConstructor;
+import task.board.dto.BoardColumnDTO;
 import task.board.persistence.entity.BoardColumnEntity;
 import task.board.persistence.entity.CardEntity;
 

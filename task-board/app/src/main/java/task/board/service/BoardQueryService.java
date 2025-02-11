@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 import lombok.AllArgsConstructor;
+import task.board.dto.BoardDetailsDTO;
 import task.board.persistence.dao.BoardColumnDAO;
 import task.board.persistence.dao.BoardDAO;
 import task.board.persistence.entity.BoardEntity;
