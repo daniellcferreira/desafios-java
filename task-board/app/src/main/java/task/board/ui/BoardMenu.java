@@ -4,12 +4,14 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import lombok.AllArgsConstructor;
+import task.board.dto.BoardColumnInfoDTO;
 import task.board.persistence.entity.BoardColumnEntity;
 import task.board.persistence.entity.BoardEntity;
 import task.board.persistence.entity.CardEntity;
 import task.board.service.BoardColumnQueryService;
 import task.board.service.BoardQueryService;
 import task.board.service.CardQueryService;
+import task.board.service.CardService;
 
 import static task.board.persistence.config.ConnectionConfig.getConnection;
 
